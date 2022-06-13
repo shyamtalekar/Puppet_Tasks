@@ -18,7 +18,7 @@ sudo sed -i 's/stretch/bullseye/g' /etc/apt/sources.list.d/*
 echo "upgrade to Debian 11 Bullseye"                                                                                                                         sudo apt update -y                                                                                                                                          sudo apt upgrade -y
 
 echo "apt full-upgrade to complete the upgrade to Debian 11"
-sudo apt full-upgrade
+sudo apt full-upgrade -y
 
 echo "reboot your system"
 sudo reboot
