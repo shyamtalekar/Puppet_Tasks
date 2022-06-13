@@ -9,7 +9,7 @@ sudo apt full-upgrade -y
 echo "remove any unused dependencies"
 sudo apt autoremove -y
 
-echo "take backup and replace all instances of stretch with bullseye"
+echo "backup and replace all instances of stretch with bullseye"
 sudo cp -v /etc/apt/sources.list /root/
 sudo cp -rv /etc/apt/sources.list.d/ /root/
 sudo sed -i 's/stretch/bullseye/g' /etc/apt/sources.list
