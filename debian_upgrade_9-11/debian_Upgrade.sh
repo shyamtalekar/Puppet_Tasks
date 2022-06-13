@@ -6,6 +6,12 @@ echo "update all the packages on your Debian system"
 sudo apt update -y
 sudo apt full-upgrade -y
 
+echo "reboot if required"
+if [ -f /var/run/reboot-required ]; then
+    echo 'Reboot required!'
+    sudo reboot
+fi
+
 echo "remove any unused dependencies"
 sudo apt autoremove -y
 
